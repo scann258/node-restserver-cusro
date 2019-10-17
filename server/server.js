@@ -17,9 +17,10 @@ app.use(require('./routes/usuario'));
 
 
 //Conectar DB Mongoose
-mongoose.connect('mongodb://localhost:27017/cafe', {
+mongoose.connect(process.env.URLDB, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true
 }, (err, res) => {
 
     if (err) throw err;
