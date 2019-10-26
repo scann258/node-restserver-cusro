@@ -8,6 +8,8 @@ const { verificaToken, verificaAdmin_Role } = require('../middlewares/autenticac
 
 const app = express();
 
+
+
 // GET - OBTENER USUARIOS
 app.get('/usuario', verificaToken, (req, res) => {
 
